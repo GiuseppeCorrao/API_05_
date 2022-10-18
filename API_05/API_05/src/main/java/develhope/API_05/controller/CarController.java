@@ -15,9 +15,10 @@ public class CarController {
     }
 
     @PostMapping("cars")
+    @ResponseStatus(HttpStatus.CREATED)
     public String PostCar(@Valid @RequestBody CarDTO car) {
 
-        return car.toString() + " " + HttpStatus.CREATED.toString();
+        return car.toString();
 
     }
 }
